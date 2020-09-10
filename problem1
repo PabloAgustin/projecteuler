@@ -1,0 +1,22 @@
+/* Find the sum of all the multiples of 3 or 5 below the provided parameter value number */
+
+function multiplesOf3and5(number) {
+  let idx3 = 0;
+  let idx5 = 0;
+  let sum = 0;
+  while( (idx3 * 3) < number ) {
+    sum += idx3 * 3;
+    if ((idx3 + 1) % 5 == 0) {
+      idx3 = idx3 +2;
+    } else {
+      idx3++;
+    }
+  }
+  while((idx5 * 5) < number){
+    sum += idx5 * 5;
+    idx5++;
+  }
+  return sum;
+}
+
+multiplesOf3and5(49);
